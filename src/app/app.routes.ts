@@ -51,6 +51,13 @@ export const routes: Routes = [
       ).then((m) => m.ListadoPublicoComponent),
   },
   {
+    path: 'abm-container',
+    loadComponent: () =>
+      import(
+        './components/container/abm-container/abm-container.component'
+      ).then((m) => m.AbmContainerComponent),
+  },
+  {
     path: '',
     redirectTo: '/bienvenida',
     pathMatch: 'full',

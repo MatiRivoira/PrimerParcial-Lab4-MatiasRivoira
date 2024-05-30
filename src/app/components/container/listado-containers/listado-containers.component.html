@@ -1,0 +1,16 @@
+<div class="col" *ngFor="let helado of helados">
+  <div class="card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal">{{ helado.codigo }}</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">{{ helado.color }}</h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>Empresa: {{ helado.empresa }}</li>
+        <li>Capacidad: {{ helado.capacidad }} unidades</li>
+      </ul>
+      <button class="btn btn-primary" (click)="seleccionarHelado(helado, 'modificar')">Modificar</button>
+      <button class="btn btn-danger" (click)="seleccionarHelado(helado, 'borrar')">Borrar</button>
+    </div>
+  </div>
+</div>

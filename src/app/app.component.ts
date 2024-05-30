@@ -36,12 +36,14 @@ export class AppComponent {
         return 'Crear cuenta | Primer Parcial';
       case '/forgot-password':
         return 'Recuperar Contraseña | Primer Parcial';
-      case '/alta-repartidor':
-        return 'Alta de Repartidor | Primer Parcial';
-      case '/listado-repartidores':
-        return 'Listado de Repartidores | Primer Parcial';
-      case '/listado-helados':
-        return 'Listado de Helados | Primer Parcial';
+      case '/alta-producto':
+        return 'Alta producto | Primer Parcial';
+      case '/listado-productos':
+        return 'Listado Productos | Primer Parcial';
+      case '/listado-publico':
+        return 'Listado Publico | Primer Parcial';
+      case '/abm-container':
+        return 'ABM container | Primer Parcial';
       default:
         return 'Primer Parcial';
     }

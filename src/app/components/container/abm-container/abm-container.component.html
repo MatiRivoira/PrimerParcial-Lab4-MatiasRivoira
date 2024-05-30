@@ -1,0 +1,15 @@
+<div class="container py-5">
+    <header class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Listado de Containers</h1>
+    </header>
+    
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <app-listado-containers (repartidorSeleccionado)="actualizarRepartidor($event)"></app-listado-containers>
+    </div>
+  
+    <button style="width: 100%;" class="btn btn-success mb-4" (click)="modo = 'crear'">Crear Container</button>
+  
+    <app-crear-container *ngIf="modo === 'crear'" (heladoCreado)="agregarHelado($event)" (cancelar)="cancelar()"></app-crear-container>
+    <app-modificar-container *ngIf="modo === 'modificar'" [helado]="heladoSeleccionado" (heladoModificado)="modificarHelado($event)" (cancelar)="cancelar()"></app-modificar-container>
+    <app-borrar-container *ngIf="modo === 'borrar'" [helado]="heladoSeleccionado" (heladoBorrado)="borrarHelado(heladoSeleccionado.helado.id)" (cancelar)="cancelar()"></app-borrar-container>
+  </div>
