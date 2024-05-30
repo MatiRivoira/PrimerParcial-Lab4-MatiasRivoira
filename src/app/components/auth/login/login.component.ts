@@ -32,9 +32,7 @@ export class LoginComponent implements OnInit{
     this.showPassword = !this.showPassword;
   }
 
-  constructor(private titleService: Title, private router:Router) {
-    this.titleService.setTitle("Iniciar sesión | Sala de juegos");
-  }
+  constructor(private router:Router) {}
 
   ngOnInit(): void {
     this.authService.LogOut()

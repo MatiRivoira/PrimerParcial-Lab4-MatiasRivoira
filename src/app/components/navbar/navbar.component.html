@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid" style="display: flex; justify-content: center; align-items: center; text-align: center;">
         <div class="navbar-center">
-            <img routerLink="/bienvenida" src="https://firebasestorage.googleapis.com/v0/b/prueba1-f50d0.appspot.com/o/title.png?alt=media&amp;token=d4b68d71-05f7-40a8-b8b9-7b27cc7c0b1a" alt="V" width="100px">
+            <img routerLink="/bienvenida" src="https://firebasestorage.googleapis.com/v0/b/posible-parcial.appspot.com/o/title.png?alt=media&token=4d7d507c-8b2f-4ab2-9cbd-b3965f8b51f9" alt="V" width="100px">
         </div>
         <button (click)="togleNav()" class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" [ngStyle]="buttonStyle"></span>
@@ -13,19 +13,19 @@
     <div class="collapse navbar-collapse justify-content-center" [ngStyle]="navDownStyle">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/bienvenida">Bienvenida</a>
+                <a class="nav-link" routerLink="/bienvenida" [class.active]="isActiveRoute('/bienvenida')">Bienvenida</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login">Iniciar sesion</a>
+                <a class="nav-link" routerLink="/login" [class.active]="isActiveRoute('/login')">Iniciar sesion</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/alta-repartidor">Alta Repartidor</a>
+                <a class="nav-link" routerLink="/alta-repartidor" [class.active]="isActiveRoute('/alta-repartidor')">Alta Repartidor</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/listado-repartidores">Listado repartidores</a>
+                <a class="nav-link" routerLink="/listado-repartidores" [class.active]="isActiveRoute('/listado-repartidores')">Listado repartidores</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/listado-helados">Listado helados</a>
+                <a class="nav-link" routerLink="/listado-helados" [class.active]="isActiveRoute('/listado-helados')">Listado helados</a>
             </li>
         </ul>
     </div>

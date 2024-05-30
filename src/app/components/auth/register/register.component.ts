@@ -30,9 +30,7 @@ export class RegisterComponent {
     this.showPassword = !this.showPassword;
   }
 
-  constructor(private titleService: Title, private router: Router) {
-    this.titleService.setTitle("Crear cuenta | Sala de juegos");
-  }
+  constructor(private router: Router) {}
 
   //? Register with firebase
   firebaseService = inject(AuthService);

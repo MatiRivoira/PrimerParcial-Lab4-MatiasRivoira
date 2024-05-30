@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { inject } from "@angular/core";
 import { AuthService } from '../../../services/auth.service';
 import { FormsModule } from '@angular/forms';
@@ -18,9 +17,7 @@ export class ForgotPasswordComponent {
   errorStates = { email: false };
   res!:boolean;
 
-  constructor(private titleService: Title, private router:Router) {
-    this.titleService.setTitle("Restablecer contraseña | Sala de juegos");
-  }
+  constructor() {}
 
   //?fp with firebase
   firebaseService = inject(AuthService);

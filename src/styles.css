@@ -3,4 +3,24 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: scroll; /* Fuerza la barra de desplazamiento vertical */
+
 }
+
+::-webkit-scrollbar {
+    width: 1px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff; /* Color de fondo de la pista de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000; /* Color de la barra de desplazamiento */
+    border-radius: 6px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000000; /* Color de la barra de desplazamiento al pasar el mouse */
+}
+
