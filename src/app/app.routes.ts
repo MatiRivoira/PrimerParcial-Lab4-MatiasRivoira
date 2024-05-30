@@ -37,6 +37,20 @@ export const routes: Routes = [
       ).then((m) => m.AltaProductoComponent),
   },
   {
+    path: 'listado-productos',
+    loadComponent: () =>
+      import(
+        './components/producto/listado-productos/listado-productos.component'
+      ).then((m) => m.ListadoProductosComponent),
+  },
+  {
+    path: 'listado-publico',
+    loadComponent: () =>
+      import(
+        './components/producto/listado-publico/listado-publico.component'
+      ).then((m) => m.ListadoPublicoComponent),
+  },
+  {
     path: '',
     redirectTo: '/bienvenida',
     pathMatch: 'full',

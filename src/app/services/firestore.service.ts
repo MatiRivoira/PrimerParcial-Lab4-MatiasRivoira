@@ -39,9 +39,13 @@ export class FirestoreService {
   // Search document by restriction
   getDocumentsWhere(collection: string, field: string, value: any): Observable<any[]> {
     let collectionRef: AngularFirestoreCollection<any> = this.firestore.collection(collection);
-    if (field && value) {
-      collectionRef = this.firestore.collection(collection, ref => ref.where(field, '==', value));
+    
+    if (field && value !== undefined && value !== null) {
+      collectionRef = this.firestore.collection(collection, ref => ref.where(field, '>', value).where('stock', '>', 0));
+    } else {
+      collectionRef = this.firestore.collection(collection, ref => ref.where('stock', '>', 0));
     }
+
     return collectionRef.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
@@ -52,4 +56,5 @@ export class FirestoreService {
       })
     );
   }
+
 }

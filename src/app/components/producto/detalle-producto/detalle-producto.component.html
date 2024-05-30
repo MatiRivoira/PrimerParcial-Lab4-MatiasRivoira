@@ -1,0 +1,8 @@
+<div *ngIf="productoRecibido">
+    <p>CÓDIGO: {{ productoRecibido?.codigo }}</p>
+    <p>DESCRIPCIÓN: {{ productoRecibido?.descripcion }}</p>
+    <p>PRECIO: {{ productoRecibido?.precio }}</p>
+    <p>STOCK: {{ productoRecibido?.stock }}</p>
+    <p *ngIf="productoRecibido && productoRecibido.paisOrigen">PAÍS: {{ productoRecibido.paisOrigen.name?.common }}</p>
+    <p>COMESTIBLE: {{ productoRecibido?.comestible ? "SI" : "NO" }}</p>
+</div>

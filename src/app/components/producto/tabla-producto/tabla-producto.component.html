@@ -1,0 +1,36 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">
+                CODIGO
+            </th>
+            <th scope="col">
+                DESCRIPCIÓN
+            </th>
+            <th scope="col">
+                PRECIO
+            </th>
+            <th scope="col">
+                STOCK
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="cursor: pointer" 
+        *ngFor="let repartidor of repartidores"
+        (click)="seleccionarRepartidor(repartidor)">
+            <td>
+                {{repartidor.codigo}}
+            </td>
+            <td>
+                {{repartidor.descripcion}}
+            </td>
+            <td>
+                {{repartidor.precio}}
+            </td>
+            <td>
+                {{repartidor.stock}}
+            </td>   
+        </tr>
+    </tbody>
+</table>

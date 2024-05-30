@@ -39,8 +39,8 @@ export class AltaProductoComponent {
     this.forma = this.fb.group({
       codigo: ['', Validators.required],
       descripcion: ['', Validators.required],
-      precio: ['', Validators.required],
-      stock: ['', Validators.required],
+      precio: [0, Validators.required],
+      stock: [0, Validators.required],
       comestible: [''],
     });
   }
