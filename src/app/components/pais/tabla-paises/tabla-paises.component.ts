@@ -36,12 +36,7 @@ export class TablaPaisesComponent {
       )
       .subscribe((data: any[]) => {
         // Filtrar países de África y Europa
-        this.paises = data
-          .filter(
-            (country) =>
-              country.region === 'Africa' || country.region === 'Europe'
-          )
-          .slice(0, 10); // Mostrar solo 10 países
+        this.paises = data.slice(0, 10); // Mostrar solo 10 países
       });
   }
 

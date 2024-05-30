@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+            <app-tabla-paises (paisSeleccionado)="seleccionarPais($event)"></app-tabla-paises>
+        </div>
+        <div class="col-md-7 col-lg-8">
+            <div class="row g-3">
+                <h4>Alta de Repartidor</h4>
+                <form [formGroup]="forma" (ngSubmit)="onSubmit()">
+                    <div class="col-12 ">
+                        <label for="codigo">Codigo</label>
+                        <input id="codigo" formControlName="codigo" class="form-control">
+                    </div>
+                    <div class="col-12 ">
+                        <label for="descripcion">Descripcion</label>
+                        <input id="descripcion" formControlName="descripcion" class="form-control">
+                    </div>
+                    <div class="col-12 ">
+                        <label for="precio">Precio</label>
+                        <input id="precio" formControlName="precio" type="number" class="form-control">
+                    </div>
+                    <div class="col-12 ">
+                        <label for="stock">Stock</label>
+                        <input id="stock" formControlName="stock" type="number" class="form-control">
+                    </div>
+                    <div class="col-12 ">
+                        <label for="unidadPropia">Comestible</label>
+                        <input id="unidadPropia" formControlName="comestible" type="checkbox">
+                    </div>
+                    <hr class="my-4">
+                    <button type="submit" class="w-100 btn btn-primary btn-lg">Dar de Alta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

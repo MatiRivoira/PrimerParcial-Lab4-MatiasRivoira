@@ -30,25 +30,11 @@ export const routes: Routes = [
       ).then((m) => m.ForgotPasswordComponent),
   },
   {
-    path: 'alta-repartidor',
+    path: 'alta-producto',
     loadComponent: () =>
       import(
-        './components/repartidor/alta-repartidor/alta-repartidor.component'
-      ).then((m) => m.AltaRepartidorComponent),
-  },
-  {
-    path: 'listado-repartidores',
-    loadComponent: () =>
-      import(
-        './components/repartidor/listado-repartidor/listado-repartidor.component'
-      ).then((m) => m.ListadoRepartidorComponent),
-  },
-  {
-    path: 'listado-helados',
-    loadComponent: () =>
-      import(
-        './components/helado/listado-helados/listado-helados.component'
-      ).then((m) => m.ListadoHeladosComponent),
+        './components/producto/alta-producto/alta-producto.component'
+      ).then((m) => m.AltaProductoComponent),
   },
   {
     path: '',
