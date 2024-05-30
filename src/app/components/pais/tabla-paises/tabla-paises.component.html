@@ -1,0 +1,16 @@
+<div class="container">
+  <label for="capacidad">Seleccionar País:</label><br>
+  <button (click)="toggleCountryList()" class="form-control">
+    @if (this.paisSelected) {
+      <img class="img-pais" [src]="this.paisSelected.flags.png" alt=""> {{ this.paisSelected.name.common }}
+    } @else {
+      Seleccionar País
+    }
+  </button>
+  <ul class="list-group" *ngIf="showCountryList">
+    <li class="list-group-item" *ngFor="let pais of paises" (click)="seleccionarPais(pais)">
+      <img class="img-pais" [src]="pais.flags.png" alt=""> {{ pais.name.common }}
+    </li>
+  </ul>
+</div>
+  

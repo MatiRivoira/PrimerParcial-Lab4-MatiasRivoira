@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Bienvenido</h1>
+        <div *ngIf="user" class="card mx-auto mt-4" style="max-width: 400px;">
+            <img [src]="user.avatar_url" class="card-img-top rounded-circle mt-3" alt="Avatar" width="150">
+            <div class="card-body">
+                <h2 class="card-title">{{ user.login }}</h2>
+                <p class="card-text">{{ user.bio }}</p>
+            </div>
+        </div>
+    </div>
+</div>

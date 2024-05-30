@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Alta de Repartidor</h1>
+    <form [formGroup]="repartidorForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="dni">DNI</label>
+        <input id="dni" formControlName="dni" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" formControlName="nombre" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input id="edad" formControlName="edad" type="number" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="capacidad">Capacidad de Transporte (unidades de potes de helado)</label>
+        <input id="capacidad" formControlName="capacidad" type="number" class="form-control">
+      </div>
+      <div class="form-group">
+        <app-tabla-paises (paisSeleccionado)="seleccionarPais($event)"></app-tabla-paises>
+      </div>
+      <div class="form-group">
+        <label for="unidadPropia">Unidad Propia</label>
+        <input id="unidadPropia" formControlName="unidadPropia" type="checkbox">
+      </div>
+      <button type="submit" class="btn btn-primary">Dar de Alta</button>
+    </form>
+  </div>
+  

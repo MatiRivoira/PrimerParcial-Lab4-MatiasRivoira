@@ -1,0 +1,8 @@
+<div *ngIf="repartidor">
+    <h3>{{ repartidor.nombre }}</h3>
+    <p>DNI: {{ repartidor.dni }}</p>
+    <p>Edad: {{ repartidor.edad }}</p>
+    <p>Capacidad de transporte: {{ repartidor.capacidadTransporte }}</p>
+    <p>Unidad propia: {{ repartidor.unidadPropia ? 'Sí' : 'No' }}</p>
+    <p>Pais: {{ repartidor.pais.name.common }}</p>
+</div>

@@ -1,0 +1,11 @@
+<div class="card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">Borrar Helado</h4>
+    </div>
+    <div class="card-body">
+        <p>¿Está seguro de que desea borrar el helado <strong>{{ helado.nombre }}</strong>?</p>
+        <button class="btn btn-danger" (click)="borrarHelado()">Borrar</button>
+        <button class="btn btn-secondary" (click)="cancelar.emit()">Cancelar</button>
+    </div>
+</div>
+

@@ -1,0 +1,54 @@
+nav {
+    font-weight: 500;
+}
+
+.navbar {
+    background-color: white !important;
+}
+
+.navbar-brand {
+    margin: 0px !important;
+    padding-left: 8px;
+    transition: opacity 0.3s ease;
+}
+.navbar-brand.hide {
+    opacity: 0;
+}
+
+.navbar-nav {
+    text-align: center !important;
+}
+
+.nav-link {
+    padding: 0px 30px !important;
+    font-size: 120%;
+    font-weight: normal !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Un valor alto para asegurar que esté sobre otros elementos */
+    animation: fadeIn 0.5s ease;
+}

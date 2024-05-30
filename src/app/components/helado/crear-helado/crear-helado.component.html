@@ -1,0 +1,27 @@
+<div class="card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">Crear Helado</h4>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="heladoForm" (ngSubmit)="crearHelado()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input id="nombre" formControlName="nombre" class="form-control" type="text">
+            </div>
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo</label>
+                <input id="tipo" formControlName="tipo" class="form-control" type="text">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input id="precio" formControlName="precio" class="form-control" type="number">
+            </div>
+            <div class="mb-3">
+                <label for="peso" class="form-label">Peso (gramos)</label>
+                <input id="peso" formControlName="peso" class="form-control" type="number">
+            </div>
+            <button type="submit" class="btn btn-success">Crear</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelar.emit()">Cancelar</button>
+        </form>
+    </div>
+</div>

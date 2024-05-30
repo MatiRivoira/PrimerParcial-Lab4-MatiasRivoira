@@ -1,0 +1,6 @@
+<div *ngIf="pais">
+    <h3>{{ pais.name.common }}</h3>
+    <img [src]="pais.flags.png" alt="{{ pais.name.common }} flag">
+    <p>Region: {{ pais.region }}</p>
+    <p>Subregion: {{ pais.subregion }}</p>
+</div>
